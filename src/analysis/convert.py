@@ -27,11 +27,11 @@ for row in cursor:
 	info.exchange = row[11]
 	temp = data.get(code_)
 	if temp is None:
-		print("为空 = " + code_)
 		list = code_info()
 		list.code = code_
+		list.infos = []
 		list.infos.append(info)
-		data.__setitem__(code_,list)
+		data[code_] = list
 	else:
 		temp.infos.append(info)
 for code_ in data.keys():

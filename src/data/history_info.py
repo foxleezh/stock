@@ -1,5 +1,5 @@
 class code_info:
-    infos = list()
+    infos = []
     code = ""
 
 class history_info:
