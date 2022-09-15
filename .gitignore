@@ -1,5 +1,6 @@
 venv/
 *.sqlite
+*.pyc
 .idea/
 # Finder
 .DS_Store

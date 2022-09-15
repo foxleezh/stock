@@ -5,13 +5,13 @@ import sqlite3
 import time
 conn = sqlite3.connect('../data.sqlite')
 
-#stock_zh_a_spot_em_df = ak.stock_zh_a_spot_em()
-#stock_zh_a_spot_em_df.to_sql('code', con=conn, if_exists='append', index=True)
+stock_zh_a_spot_em_df = ak.stock_zh_a_spot_em()
+stock_zh_a_spot_em_df.to_sql('code', con=conn, if_exists='append', index=True)
 
 cursor=conn.cursor()
 
 end = datetime.datetime.now()
-start = end - relativedelta(months=3)
+start = end - relativedelta(months=6)
 #start = end - relativedelta(days=10)
 
 cursor.execute("SELECT \"日期\" FROM stock ORDER BY \"日期\" DESC LIMIT 1")

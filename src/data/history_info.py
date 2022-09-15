@@ -20,3 +20,11 @@ class history_info:
         return '(%s %s %f %f %f %f %f %f %f %f %f %f )' % (
         self.code, self.date, self.open, self.close, self.high, self.low,
         self.volume, self.total, self.range, self.raise_volume, self.raise_total, self.exchange)
+
+    def my_cmp(self, s):
+        if self.date > s.date:
+            return -1
+        elif self.date < s.date:
+            return 1
+        else:
+            return 0
